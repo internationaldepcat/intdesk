@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LOST LUGGAGE SERVICE – Atención al cliente | WhatsApp</title>
+  <meta name="description" content="Contacto de atención al cliente con Lost Luggage Service: botón de WhatsApp y QR escaneable para gestionar equipaje extraviado." />
+  <meta property="og:title" content="Lost Luggage Service – WhatsApp directo" />
+  <meta property="og:description" content="Servicio de reposición de artículos esenciales para huéspedes con equipaje extraviado. Botón y QR para abrir WhatsApp al instante." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="" />
+  <style>
+    :root{
+      /* Tema claro con detalles verdes */
+      --primary:#16a34a; /* verde */
+      --primary-600:#15803d;
+      --primary-700:#166534;
+      --bg:#ffffff;
+      --card:#ffffff;
+      --text:#0f172a; /* slate-900 */
+      --muted:#475569; /* slate-600 */
+      --border:#e2e8f0; /* slate-200 */
+      --radius:14px;
+      --shadow: 0 10px 30px rgba(2,6,23,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.45;
+    }
+    .container{ max-width:1100px; margin:0 auto; padding:24px; }
+    header{ display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 10px 0 22px; }
+    .brand{ display:flex; align-items:center; gap:12px; }
+    .logo{ width:44px; height:44px; border-radius:12px; background: linear-gradient(135deg, var(--primary), #22c55e); box-shadow: 0 8px 18px rgba(22,163,74,.35); display:grid; place-items:center; font-weight:800; color:white; }
+    h1{font-size: clamp(1.4rem, 2vw + 1rem, 2.2rem); margin:0}
+    .muted{color:var(--muted)}
+    .grid{ display:grid; grid-template-columns: 1.2fr .8fr; gap:22px; }
+    @media (max-width: 900px){ .grid{ grid-template-columns: 1fr } }
+    .card{ background: var(--card); backdrop-filter: none; border:1px solid var(--border); border-radius: var(--radius); padding:18px; box-shadow: var(--shadow); }
+    .cta-row{ display:flex; flex-wrap:wrap; gap:12px; margin: 14px 0 6px; }
+    .btn{ display:inline-flex; align-items:center; gap:10px; border:none; border-radius:12px; padding:12px 16px; cursor:pointer; font-weight:700; text-decoration:none; transition:.18s ease; }
+    .btn-primary{ background: var(--primary); color:white; }
+    .btn-primary:hover{ background: var(--primary-600); transform: translateY(-1px) }
+    .btn-outline{ background: transparent; border:1.5px solid var(--primary); color: var(--primary-700); }
+    .btn-outline:hover{ background: rgba(22,163,74,.06); transform: translateY(-1px) }
+    .contacts{ display:grid; gap:10px; margin-top:8px; }
+    .contact-item{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px; background: var(--card); border:1px solid var(--border); border-radius:12px; }
+    .contact-meta{ display:flex; align-items:center; gap:12px }
+    .circle{ width:40px; height:40px; border-radius:10px; display:grid; place-items:center; font-weight:700; color:white }
+    .tel{ background:#0ea5e9 }
+    .wa{ background:#22c55e }
+    .copy{ font-size:.9rem; color:var(--primary-700); cursor:pointer; border:1px dashed var(--primary); padding:6px 10px; border-radius:999px; background: rgba(22,163,74,.06) }
+    .copy:hover{ background: rgba(22,163,74,.12) }
+    .status{ display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; font-weight:700; border:1px solid var(--border) }
+    .open{ background: rgba(22,163,74,.10); color: var(--primary-700); border-color: rgba(22,163,74,.35) }
+    .closed{ background: #fef2f2; color:#b91c1c; border-color:#fecaca }
+    .hours{ display:grid; grid-template-columns: 1fr auto; gap:8px; margin-top:10px; font-size:.95rem; color:var(--muted) }
+    details{ border:1px solid var(--border); background: var(--card); border-radius:12px; padding:12px 14px }
+    summary{ cursor:pointer; font-weight:700 }
+    .faq{ display:grid; gap:10px }
+    footer{ margin:24px 0 8px; text-align:center; color:var(--muted); font-size:.9rem }
+    .floating{ position: fixed; right:16px; bottom:16px; display:flex; flex-direction:column; gap:10px; z-index:9999 }
+    .fab{ width:52px; height:52px; border-radius:50%; display:grid; place-items:center; color:white; box-shadow: var(--shadow); text-decoration:none }
+    .fab-wa{ background:#22c55e }
+    .fab-call{ background:#0ea5e9 }
+    .fab:hover{ transform: translateY(-2px) }
+    code.inline{ background: #f1f5f9; color:#0f172a; padding:.2rem .4rem; border-radius:8px; border:1px solid var(--border) }
+    /* QR image styling */
+    .qr-wrap{display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin:10px 0 0;}
+    .qr{max-width:220px; width:100%; height:auto; border:1px solid var(--border); border-radius:12px; padding:8px; background:#fff;}
+    .qr-caption{color:var(--muted); font-size:.92rem;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">ECI Catalunya</div>
+        <div>
+          <h1>El Corte Inglés Plaza Catalunya</h1>
+          <div class="muted">International Customer Care</div>
+        </div>
+      </div>
+      <div id="statusBadge" class="status">Comprobando horario…</div>
+    </header>
+
+    <div class="grid">
+      <!-- Columna izquierda -->
+      <section class="card" aria-labelledby="cta-title">
+        <h2 id="cta-title" style="margin-top:4px">Contáctanos</h2>
+        <p class="muted">Elige el canal que prefieras. Te responderemos lo antes posible durante el horario de atención.</p>
+        <div class="cta-row">
+          <a id="ctaCall" class="btn btn-primary" href="#" aria-label="Llamar por teléfono">📞 Llamar ahora</a>
+          <a id="ctaWhats" class="btn btn-outline" target="_blank" rel="noopener" href="#" aria-label="Abrir chat de WhatsApp">💬 WhatsApp</a>
+        </div>
+        <div class="contacts" aria-label="Contactos">
+          <!-- Soporte principal -->
+          <div class="contact-item">
+            <div class="contact-meta">
+              <div class="circle tel" aria-hidden="true">📞</div>
+              <div>
+                <div style="font-weight:700">Teléfono – Soporte</div>
+                <div class="muted"><span id="telNumber">+34 682 82 41 14</span></div>
+              </div>
+            </div>
+            <button class="copy" data-copy="+34682824114" aria-label="Copiar teléfono">Copiar</button>
+          </div>
+          <div class="contact-item">
+            <div class="contact-meta">
+              <div class="circle wa" aria-hidden="true">💬</div>
+              <div>
+                <div style="font-weight:700">WhatsApp – Soporte</div>
+                <div class="muted"><span id="waNumber">+34 682 82 41 14</span></div>
+              </div>
+            </div>
+            <a class="copy" target="_blank" rel="noopener" id="waOpen" href="#" aria-label="Abrir WhatsApp">Abrir</a>
+          </div>
+          <!-- Comercial -->
+          <div class="contact-item">
+            <div class="contact-meta">
+              <div class="circle tel" aria-hidden="true">📞</div>
+              <div>
+                <div style="font-weight:700">Teléfono – Comercial</div>
+                <div class="muted"><span id="telNumber2">+34 999 88 87 77</span></div>
+              </div>
+            </div>
+            <button class="copy" data-copy="+34999888777" aria-label="Copiar teléfono comercial">Copiar</button>
+          </div>
+          <div class="contact-item">
+            <div class="contact-meta">
+              <div class="circle wa" aria-hidden="true">💬</div>
+              <div>
+                <div style="font-weight:700">WhatsApp – Comercial</div>
+                <div class="muted"><span id="waNumber2">+34 999 88 87 77</span></div>
+              </div>
+            </div>
+            <a class="copy" target="_blank" rel="noopener" id="waOpen2" href="#" aria-label="Abrir WhatsApp comercial">Abrir</a>
+          </div>
+        </div>
+        <div class="hours" aria-label="Horario de atención">
+          <div>Lunes–Viernes</div><div>09:00–21:00</div>
+          <div>Sábados</div><div>09:00–21:00</div>
+          <div>Domingos y festivos</div><div>Cerrado</div>
+        </div>
+      </section>
+
+      <!-- BLOQUE: Lost Luggage Service -->
+      <section class="card" aria-labelledby="lls-title">
+        <h2 id="lls-title" style="margin-top:4px">🧳 LOST LUGGAGE SERVICE</h2>
+        <p><strong>Servicio de reposición de artículos esenciales para huéspedes del hotel con equipaje extraviado durante el viaje.</strong></p>
+        <div class="cta-row">
+          <a id="llsBtn" class="btn btn-primary" target="_blank" rel="noopener" href="#" aria-label="Abrir WhatsApp Lost Luggage">💬 Abrir WhatsApp</a>
+        </div>
+        <div class="qr-wrap">
+          <a id="llsQrLink" href="#" target="_blank" rel="noopener" aria-label="Escanear QR para abrir WhatsApp Lost Luggage">
+            <img src="QR INT DESK.png" alt="QR WhatsApp Lost Luggage" class="qr">
+          </a>
+          <div class="qr-caption">Escanéalo con tu móvil para abrir WhatsApp al instante.</div>
+        </div>
+        <div class="contacts" aria-label="Contacto Lost Luggage">
+          <div class="contact-item">
+            <div class="contact-meta">
+              <div class="circle wa" aria-hidden="true">💬</div>
+              <div>
+                <div style="font-weight:700">WhatsApp – Lost Luggage Service</div>
+                <div class="muted"><span id="waNumberLLS">+34 682 82 41 14</span></div>
+              </div>
+            </div>
+            <a class="copy" target="_blank" rel="noopener" id="waOpenLLS" href="#" aria-label="Abrir WhatsApp Lost Luggage">Abrir</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Columna derecha -->
+      <aside class="card" aria-labelledby="faq-title">
+        <h2 id="faq-title" style="margin-top:4px">Preguntas frecuentes</h2>
+        <div class="faq">
+          <details>
+            <summary>¿Cuál es el tiempo de respuesta habitual?</summary>
+            <p>En horario laboral solemos responder en menos de 15 minutos por WhatsApp y en menos de 1 hora por teléfono si hay alta demanda.</p>
+          </details>
+          <details>
+            <summary>¿Qué información debo tener a mano?</summary>
+            <p>Tu nombre y Hotel desde donde nos contactas y una breve descripción del problema nos ayudarán a agilizar la gestión.</p>
+          </details>
+          <details>
+            <summary>¿Ofrecen soporte fuera de horario?</summary>
+            <p>Podés dejarnos un mensaje por WhatsApp o correo y te contactaremos en el siguiente turno. Para emergencias críticas, indica <em>URGENTE</em> al inicio del mensaje.</p>
+          </details>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <p>© <span id="year"></span> Servicio de Atención al Cliente • <span class="muted">Actualiza los números en el código: <code class="inline">+34999999999</code>, <code class="inline">34999999999</code>, <code class="inline">+34999888777</code> y <code class="inline">34999888777</code></span></p>
+    </footer>
+  </div>
+
+  <!-- Botones flotantes -->
+  <div class="floating" aria-label="Accesos rápidos">
+    <a class="fab fab-wa" title="WhatsApp" target="_blank" rel="noopener" id="waFab" href="#">💬</a>
+    <a class="fab fab-call" title="Llamar" id="telFab" href="#">📞</a>
+  </div>
+
+  <script>
+    // ==== Configuración de números ====
+    // PRINCIPAL (Soporte)
+    const telRaw = '+34682824114'; // REEMPLAZA con tu número internacional con +
+    const waRaw  = '34682824114';  // REEMPLAZA con tu número para WhatsApp (sin +)
+    // NUEVO (Comercial)
+    const telRaw2 = '+34999888777';
+    const waRaw2  = '34999888777';
+
+    // Rellena año
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Utilidades
+    const pretty = (num) => {
+      if(num.startsWith('+34') && num.length >= 12){
+        return '+34 ' + num.slice(3).replace(/(\d{3})(\d{2})(\d{2})(\d{2})/, '$1 $2 $3 $4');
+      }
+      return num;
+    }
+
+    // Pinta números formateados
+    document.getElementById('telNumber').textContent   = pretty(telRaw);
+    document.getElementById('waNumber').textContent    = pretty('+'+waRaw);
+    document.getElementById('telNumber2').textContent  = pretty(telRaw2);
+    document.getElementById('waNumber2').textContent   = pretty('+'+waRaw2);
+    document.getElementById('waNumberLLS').textContent = pretty('+'+waRaw);
+
+    // Enlaces dinámicos
+    const telLink  = `tel:${telRaw}`;
+    const waLink   = `https://wa.me/${waRaw}?text=${encodeURIComponent('Hola, necesito ayuda con mi pedido')}`;
+    const telLink2 = `tel:${telRaw2}`;
+    const waLink2  = `https://wa.me/${waRaw2}?text=${encodeURIComponent('Hola, me interesa información comercial')}`;
+    const waLinkLLS = `https://wa.me/${waRaw}?text=${encodeURIComponent('Hola, necesito ayuda con equipaje extraviado (Lost Luggage Service)')}`;
+
+    document.getElementById('ctaCall').setAttribute('href', telLink);
+    document.getElementById('ctaWhats').setAttribute('href', waLink);
+    document.getElementById('waOpen').setAttribute('href', waLink);
+    document.getElementById('waOpen2').setAttribute('href', waLink2);
+    document.getElementById('waFab').setAttribute('href', waLink);
+    document.getElementById('telFab').setAttribute('href', telLink);
+
+    // Lost Luggage button + QR
+    document.getElementById('waOpenLLS').setAttribute('href', waLinkLLS);
+    document.getElementById('llsBtn').setAttribute('href', waLinkLLS);
+    document.getElementById('llsQrLink').setAttribute('href', waLinkLLS);
+
+    // Copiar al portapapeles (botones con data-copy)
+    document.querySelectorAll('.copy').forEach(el => {
+      el.addEventListener('click', async (e) => {
+        const text = e.currentTarget.getAttribute('data-copy');
+        if(text){
+          try{ await navigator.clipboard.writeText(text); e.currentTarget.textContent = '¡Copiado!'; setTimeout(()=> e.currentTarget.textContent='Abrir' , 1200) }catch(err){ alert('No se pudo copiar.'); }
+        }
+      })
+    })
+
+    // Estado Abierto/Cerrado según horario local
+    function isOpen(now){
+      const day = now.getDay(); // 0=Dom, 6=Sáb
+      const minutes = now.getHours()*60 + now.getMinutes();
+      const inRange = (a,b) => minutes >= a && minutes <= b;
+      if(day>=1 && day<=5){ return inRange(9*60, 18*60); }
+      if(day===6){ return inRange(10*60, 14*60); }
+      return false; // Domingo
+    }
+    function fmtTime(date){ return date.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}) }
+    const status = document.getElementById('statusBadge');
+    function updateStatus(){
+      const now = new Date();
+      const open = isOpen(now);
+      status.className = 'status ' + (open ? 'open' : 'closed');
+      status.textContent = open ? `Abierto ahora • ${fmtTime(now)}` : `Cerrado • ${fmtTime(now)}`;
+    }
+    updateStatus();
+    setInterval(updateStatus, 60*1000);
+
+    // Accesibilidad: enfocar detalles con teclado
+    document.querySelectorAll('summary').forEach(s=>{ s.setAttribute('tabindex','0'); })
+  </script>
+</body>
+</html>
